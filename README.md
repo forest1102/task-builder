@@ -1,100 +1,100 @@
 # Task Builder
 
-**Task Builder**は、タスクを「建物の建設」として進めることで、タスク管理を視覚的かつ楽しみながら行えるウェブアプリです。タスクの進行に応じて建物が完成していき、プロジェクト全体が都市のように広がります。
+**Task Builder** is a web application that allows you to manage tasks visually and enjoyably by progressing tasks as "building construction." As tasks progress, buildings are completed, and the entire project expands like a city.
 
 ---
 
-## 概要
+## Overview
 
-Task Builder は以下を目的としています：
+Task Builder aims to:
 
-- タスク進行を「建物の建設」として可視化
-- 都市開発のような感覚でタスク管理を楽しむ
-- 自由に配置可能なレイアウトで進捗を確認
-
----
-
-## 機能一覧
-
-### 1. **タスクの管理**
-
-- **タスクの追加**  
-  タスク名と初期状態（未着手）を設定可能。
-- **タスクの編集**  
-  タスクの進行状況を「未着手」「着手中」「完了」の 3 段階で更新。
-
-### 2. **建物の建設**
-
-- タスクの進行状況に応じて建物が変化。
-  - 未着手: 半透明な建物
-  - 着手中: 半透明な建物の上に「建設中」アイコン
-  - 完了: 建物完成（完成した建築物）
-
-### 3. **ドラッグ&ドロップ**
-
-- 建物を自由に移動し、都市を好きなようにレイアウト可能。
-- 配置した建物の位置を保持。
-
-### 4. **都市レイアウト**
-
-- 建物がグリッド状に並び、進行中のプロジェクト全体を都市として表現。
-- ユーザーが都市の配置をカスタマイズ可能。
-
-### 5. **データの保存**
-
-- タスク情報や建物の配置はブラウザ内に保存され、次回アクセス時も状態を保持。
+- Visualize task progress as "building construction"
+- Enjoy task management with a sense of urban development
+- Check progress with a freely configurable layout
 
 ---
 
-## 使用方法
+## Features
 
-1. **タスクを追加する**  
-   メニューから新しいタスクを作成。タスク名を入力し、保存をクリック。
+### 1. **Task Management**
 
-2. **タスクを進行する**  
-   建物をクリックして進行状況を「着手中」「完了」に更新。進行状況に応じて建物が変化します。
+- **Add Tasks**  
+  Set the task name and initial state (not started).
+- **Edit Tasks**  
+  Update task progress in three stages: "Not Started," "In Progress," and "Completed."
 
-3. **建物を配置する**  
-   都市内で建物をドラッグ&ドロップし、好きな位置に配置。
+### 2. **Building Construction**
 
-4. **プロジェクトの進捗を確認**  
-   都市全体を眺めてタスクの進捗状況を視覚的に把握。
+- Buildings change according to task progress.
+  - Not Started: Semi-transparent building
+  - In Progress: "Under Construction" icon on a semi-transparent building
+  - Completed: Completed building
+
+### 3. **Drag & Drop**
+
+- Freely move buildings and layout the city as you like.
+- Retain the position of placed buildings.
+
+### 4. **City Layout**
+
+- Buildings are arranged in a grid, representing the entire ongoing project as a city.
+- Users can customize the city's layout.
+
+### 5. **Data Storage**
+
+- Task information and building positions are saved in the browser, retaining the state for the next access.
 
 ---
 
-## 使用するライブラリ
+## Usage
+
+1. **Add Tasks**  
+   Create a new task from the menu. Enter the task name and click save.
+
+2. **Progress Tasks**  
+   Click on buildings to update progress to "In Progress" or "Completed." Buildings change according to progress.
+
+3. **Place Buildings**  
+   Drag and drop buildings within the city to place them where you like.
+
+4. **Check Project Progress**  
+   View the entire city to visually grasp the progress of tasks.
+
+---
+
+## Libraries Used
 
 - **[React](https://reactjs.org/)**  
-  ユーザーインターフェース（タスクの追加や編集メニュー）を構築するために使用します。
+  Used to build the user interface (task addition and editing menu).
 
 - **[Phaser.js](https://phaser.io/)**  
-  タスクに対応する建物の描画や、ドラッグ&ドロップ機能を実装するために使用します。
+  Used to render buildings corresponding to tasks and implement drag & drop functionality.
 
 - **[localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage)**  
-  サーバーレスでデータを保存し、タスクや建物の位置情報を保持します。
+  Used to save data serverlessly and retain task and building position information.
 
 - **[UUID](https://github.com/uuidjs/uuid)**  
-  各タスクに一意の ID を割り振るために使用します。
+  Used to assign unique IDs to each task.
 
 - **[Tailwind CSS](https://tailwindcss.com/)**  
-  スタイリングを効率化するために使用します。
+  Used to streamline styling.
 
 ---
 
-## 今後の拡張機能（予定）
+## Future Enhancements (Planned)
 
-- **都市テーマ変更**  
-  都市の外観や建物デザインをカスタマイズ可能に。
-- **締め切りタイマー**  
-  タスクに締め切りを設定し、進捗を管理。
-- **都市共有機能**  
-  都市を他ユーザーと共有し、コラボレーション可能に。
+- **City Theme Change**  
+  Customize the appearance of the city and building designs.
+- **Deadline Timer**  
+  Set deadlines for tasks and manage progress.
+- **City Sharing Feature**  
+  Share the city with other users for collaboration.
 
 ---
 
-## 注意事項
+## Notes
 
-- 本アプリはサーバーを使用せず、ブラウザのローカルストレージにデータを保存します。そのため、デバイスを変更するとデータが引き継がれません。
-- 推奨ブラウザ: 最新バージョンの Chrome、Firefox。
+- This app does not use a server and saves data in the browser's local storage. Therefore, data will not be carried over if you change devices.
+- Recommended browsers: Latest versions of Chrome, Firefox.
 
 ---
