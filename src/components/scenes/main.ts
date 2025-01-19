@@ -8,6 +8,7 @@ import Phaser from 'phaser'
  */
 class MainScene extends Phaser.Scene {
   private Menu: Menu | undefined
+  // @ts-expect-error: TS6133
   private CityView: CityView | undefined
 
   constructor() {
