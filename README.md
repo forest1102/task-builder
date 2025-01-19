@@ -46,6 +46,26 @@ Task Builder aims to:
 
 ---
 
+## Installation
+
+```bash
+# Install dependencies
+pnpm install
+```
+
+## Development
+
+```bash
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+
+# Preview production build
+pnpm preview
+```
+
 ## Usage
 
 1. **Add Tasks**  
